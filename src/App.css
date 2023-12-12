@@ -1,0 +1,168 @@
+.one {
+    background-image: url('./kalorie-back.jpeg');
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.two {
+    background-color: rgba(0, 0, 0, 0.433);
+    color: white;
+    height: 80vh;
+    width: 100%;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    display: grid;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.inputImage1 {
+    width: 600px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 12px black;
+}
+
+.amage {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.letsKnow {
+    font-family: sans-serif;
+    text-align: center;
+    color: whitesmoke;
+    background-color: black;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.please {
+    font-family: sans-serif;
+}
+
+.res {
+    text-align: center;
+    font-family: sans-serif;
+    margin-top: 3rem;
+    background-color: cyan;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.res p {
+    font-size: 50px;
+    background-color: black;
+    color: aliceblue;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.main {
+    background-color: cornsilk;
+}
+
+.imageSubs {
+    width: 600px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 4px 14px black;
+    height: 400px;
+    background-color: whitesmoke;
+    font-family: sans-serif;
+}
+
+.imageSubsContainer {
+    display: flex;
+    justify-content: center;
+  }
+  
+
+.data {
+    text-align: center;
+}
+
+.loadSpinContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  .imageSubs h1 {
+    margin-top: 9rem;
+  }
+
+  .one {
+    background-color: #3498db;
+    color: #fff;
+    padding: 2rem;
+  }
+  
+  .two {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .graph {
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    border: 1px solid black;
+    flex-direction: column;
+    padding: 3.5rem;
+    text-align: center;
+    font-family: sans-serif;
+    align-items: center;
+    background-color: azure;
+    border-radius: 5px;
+  }
+
+
+  .graph h1 {
+    margin-bottom: 2rem;
+  }
+
+.tab thead {
+    background-color: blanchedalmond;
+}
+
+.tab thead th {
+    padding: 0.6rem;
+}
+
+.al1 {
+    background-color:blanchedalmond;
+}
+
+.al1 td {
+    padding: 0.6rem;
+}
+
+.sp td {
+    padding: 0.6rem;
+}
+
+.who {
+    border: 1px dashed black;
+    border-radius: 5px;
+    background-color:azure;
+    font-family: sans-serif;
+    margin-top: 2rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    padding-bottom: 2rem;
+}
+
+  

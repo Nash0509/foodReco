@@ -1,0 +1,76 @@
+.head1 {
+    display: flex;
+}
+
+.headc {
+    margin-left: 50vw;
+    margin-top: -5px;
+}
+
+.headc ul {
+    display: block;
+}
+
+.headc ul li{
+    display: inline-block;
+    margin-left: 2rem;
+    font-size: 1.1rem;
+    background-color: greenyellow;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.brand {
+    margin-left: 5vw;
+    margin-top: -5px;
+}
+
+.headc ul li a {
+   color: white;
+   text-decoration: none;
+
+}
+
+.headc ul li:hover {
+    color: silver;
+    background-color: blue;
+}
+
+.footer {
+    background-color: black;
+    height: 40vh;
+    border-radius: 10px;
+    margin-top: 5rem;
+}
+
+.foot {
+    font-family: sans-serif;
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+
+.founders {
+    background-color: bisque;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1536px) {
+    
+    .headc ul li {
+        display: inline-block;
+        margin-left: 2rem;
+        font-size: 1.1rem;
+        background-color: blue;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+    
+    .headc {
+        margin-left: 30vw;
+        margin-top: -5px;
+    }
+
+}
