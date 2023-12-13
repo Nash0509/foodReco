@@ -4,7 +4,7 @@ import { IoMdRocket } from 'react-icons/io';
 
 const Header = () => {
   return (
-    <div style={{fontFamily:'sans-serif', margin:'0', padding:'0', color:'whitesmoke', backgroundColor:'black', padding:'1rem', borderRadius:'5px'}} className='head1'>
+    <div style={{fontFamily:'sans-serif', margin:'0', color:'whitesmoke', backgroundColor:'black', padding:'1rem', borderRadius:'5px'}} className='head1'>
       <div className='brand'>
       <h1>Kalorie.ai <IoMdRocket /></h1>
       </div>
