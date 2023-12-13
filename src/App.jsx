@@ -8,12 +8,6 @@ import './App.css';
 import { FaArrowsAlt } from 'react-icons/fa';
 import { FaPizzaSlice } from 'react-icons/fa';
 import { FaFileImage } from 'react-icons/fa';
-import { IoIosTrophy } from 'react-icons/io';
-import { GiForkKnifeSpoon } from 'react-icons/gi';
-import { IoMdRestaurant } from 'react-icons/io';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFire, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
-import { faDumbbell, faBreadSlice, faBacon } from '@fortawesome/free-solid-svg-icons';
 import {
   Chart as ChartJS,
   BarElement,
