@@ -5,7 +5,10 @@ import LoaderSpin from './Components/LoaderSpin';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import './App.css';
-import { FaArrowsAlt } from 'react-icons/fa';
+import {Typewriter} from 'react-simple-typewriter';
+import {GoogleGenerativeAI} from '@google/generative-ai'
+import {CircleLoader} from 'react-spinners'
+import { FaArrowsAlt, FaMagic } from 'react-icons/fa';
 import { FaPizzaSlice } from 'react-icons/fa';
 import { FaFileImage } from 'react-icons/fa';
 import {
@@ -28,6 +31,13 @@ ChartJS.register(
 
 
 const YourComponent = () => {
+
+  const data = [
+    { name: 'Slice 1', value: 30 },
+    { name: 'Slice 2', value: 45 },
+    { name: 'Slice 3', value: 25 },
+  ];
+
   const [url, setUrl] = useState(null);
   const [loading, setLoading] = useState(false);
   const [food, setFood] = useState('');
@@ -36,6 +46,40 @@ const YourComponent = () => {
   const [advice , setAdvice] = useState('');
   const [macro, setMacro] = useState('protein:10,carb:0,fat:0');
   const [chartData, setChartData] = useState(null);
+  const [gemini, setGemini] = useState([]);
+
+  const genAI = new GoogleGenerativeAI('AIzaSyCj6GkUQm7cCY5pdbtgtu15dbpgRe2Jb4k');
+
+  useEffect(() => {
+
+     if(food !== '') {
+
+   //gemini
+
+      const genAI = new GoogleGenerativeAI('AIzaSyCj6GkUQm7cCY5pdbtgtu15dbpgRe2Jb4k');
+
+async function run() {
+  // For text-only input, use the gemini-pro model
+  const model = genAI.getGenerativeModel({ model: "gemini-pro"});
+
+  const prompt = `Tell me about the ${food} in the terms of its nutritional facts and the best practices after each. Give me the response in 10 points and put a '/' at the end of the each point.`;
+
+  const result = await model.generateContent(prompt);
+  const response = await result.response;
+  const text = response.text();
+  console.log(text);
+ setGemini(text.split('/'));
+  
+}
+
+run();
+
+  //gemini
+
+     }
+
+  }, [food, url])
+ 
 
   useEffect(() => {
     const loadModel = async () => {
@@ -215,26 +259,35 @@ const YourComponent = () => {
 
   function handleDrop(url) {
     setUrl(url);
+    setGemini('');
   }
 
   return (
-    <div style={{ margin: '0', padding: '0' }} className="main">
+    <div style={{ margin: '0', padding: '0' , backgroundColor:'black', color:'white'}} className="main">
       <Header />
-      <div className="one">
+      <div className="one" style={{backgroundColor:'black'}}>
         <div className="two">
-          <h1>Know your food <FaPizzaSlice />better.</h1>
+          <h1>Know your food <FaPizzaSlice /><span style={{fontWeight:'bold', color:'white'}}>  <Typewriter
+            words={[ 'Better!']}
+            loop={100}
+            cursor
+            cursorStyle='|'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+          /></span></h1>
         </div>
       </div>
 
       <h1 className="letsKnow">Let's know about your food <FaPizzaSlice /></h1>
-      <div style={{ textAlign: 'center' }} className="please">
+      <div style={{ textAlign: 'center', border:'1px dashed white' }} className="please">
         {url === null ? <h1>Please <FaArrowsAlt />  Drag and drop a food image...</h1> : ''}
       </div>
       <div className="amage">
         {url === null ? (
          <div className="imageSubsContainer">
          <div className="imageSubs">
-           <div className='sun'><h1>Image <FaFileImage /></h1></div>
+           <div className='sun' style={{color:'black'}}><h1>Image <FaFileImage /></h1></div>
          </div>
        </div>
         ) : (
@@ -253,9 +306,9 @@ const YourComponent = () => {
         ) : (
         <div>
          {
-          (food === '') ? <div className='res'><p>Results  </p>
+          (food === '') ? <div className='res' style={{color:'white', border:'1px dashed white'}}><p>Results  </p>
           <h1>Your results will appear here...</h1></div> : <div className="who">
-            <h1>Results</h1>
+            <h1 style={{color:'black'}}>Results</h1>
           <table className='tab'>
             <thead>
                  <th>#</th>
@@ -289,14 +342,49 @@ const YourComponent = () => {
         </div>
         )}
       </div>
-      <div className="graph">
-        <h1>Graph</h1>
-        {chartData ? (
-          <Bar data={chartData} />
+      <div className="gemini">
+        <h1>Insights from gemini &nbsp;<FaMagic /></h1>
+        {
+
+       (gemini.length == 0) ? <div className='loader'><CircleLoader size={100} style={{color:'white'}}/> <div className="cook">
+        <Typewriter
+       words={[ 'Cooking✨']}
+       loop={100}
+       cursor
+       cursorStyle='|'
+       typeSpeed={70}
+       deleteSpeed={50}
+       delaySpeed={1000}
+       />
+        </div></div> : <div className='insi'> <Typewriter
+       words={gemini}
+       loop={100}
+       cursor
+       cursorStyle='|'
+       typeSpeed={40}
+       deleteSpeed={10}
+       delaySpeed={1000}
+      /></div> 
+
+        }
+      </div>
+      <h1 style={{textAlign:'center', fontFamily:'sans-serif'}}>Graph</h1>
+      <div className="graph" style={{backgroundColor:'black', marginBottom:'5rem'}}>
+      
+      {chartData ? (
+          <Bar data={chartData}/>
         ) : (
           <h3>Will come soon...</h3>
         )}
 </div>
+
+ <div style={{textAlign:'center', fontFamily:'sans-serif', lineHeight:'25px', fontSize:'1.5rem', padding:'1rem'}}>
+   <h1>How to use</h1>
+
+   <p style={{marginTop:'4rem', marginBottom:'4rem'}}>Hi, I am Nishant 👋. This is kalorie.ai and with this app you can predict the amount of calories thats inside your food. All you need to do is provide the image of your food. You can do that by drag 'n' drop in to the box above. <br /><br />
+   
+   Along with that we have Google's AI model 'Gemini', which will provide you the 10 advice points on the food detected. <br /><br />Just drag 'n' drop and have fun with your food.  </p>
+ </div>
 
       <Footer />
     </div>

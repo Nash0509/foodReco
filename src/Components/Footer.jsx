@@ -5,8 +5,8 @@ const Footer = () => {
     <footer style={footerStyle} className='foot'>
       <div>
         <h3>Contact Us</h3>
-        <p>Email: info@example.com</p>
-        <p>Phone: +1 (123) 456-7890</p>
+        <p>Email:nishantsinghworkshard@gmail.com</p>
+        <p>Phone: +91 8957571098</p>
       </div>
 
       <div>
@@ -16,7 +16,7 @@ const Footer = () => {
 
       <div>
         <h3>Address</h3>
-        <p>1234 Street Name, City, Country</p>
+        <p>C-100, Mitra Enclave, Greater Noida, Uttar Pradesh, 201310</p>
       </div>
 
       <div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import './header.css'
 import { IoMdRocket } from 'react-icons/io';
+import { FaMagic } from 'react-icons/fa';
 
 const Header = () => {
   return (
@@ -10,8 +11,7 @@ const Header = () => {
       </div>
       <div className='headc'>
         <ul>
-          <li><a href='/'>Founders</a></li>
-          <li><a href='/'>Innovation</a></li>
+        <li><a href='/grmini'>Gemini &nbsp;<FaMagic /></a></li>
         </ul>
       </div>
     </div>

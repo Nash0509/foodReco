@@ -1,39 +1,6 @@
 .head1 {
     display: flex;
-}
-
-.headc {
-    margin-left: 50vw;
-    margin-top: -5px;
-}
-
-.headc ul {
-    display: block;
-}
-
-.headc ul li{
-    display: inline-block;
-    margin-left: 2rem;
-    font-size: 1.1rem;
-    background-color: greenyellow;
-    padding: 1rem;
-    border-radius: 5px;
-}
-
-.brand {
-    margin-left: 5vw;
-    margin-top: -5px;
-}
-
-.headc ul li a {
-   color: white;
-   text-decoration: none;
-
-}
-
-.headc ul li:hover {
-    color: silver;
-    background-color: blue;
+    align-items: center;
 }
 
 .footer {
@@ -57,20 +24,21 @@
     align-items: center;
 }
 
-@media screen and (max-width: 1536px) {
-    
-    .headc ul li {
-        display: inline-block;
-        margin-left: 2rem;
-        font-size: 1.1rem;
-        background-color: blue;
-        padding: 1rem;
-        border-radius: 5px;
-    }
-    
-    .headc {
-        margin-left: 30vw;
-        margin-top: -5px;
-    }
+.headc ul li a{
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+    padding: 0.5rem;
+    border-radius: 5px;
+    position: absolute;
+    right: 150px;
+    top: 50px;
+}
 
+.headc ul {
+    list-style: none;
+}
+
+.brand h1 {
+    margin-left: 7vw;
 }

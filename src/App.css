@@ -165,4 +165,55 @@
     padding-bottom: 2rem;
 }
 
+.loader {
+
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.cook {
+    margin-left: 2rem;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: sans-serif;
+}
+
+.gemini h1 {
+    text-align: center;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gemini {
+    padding: 1.5rem;
+}
+
+.insi {
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    padding: 1.5rem;
+    border-radius: 5px;
+    width: 70vw;
+    margin-left: 10vw;
+}
+
+.tab {
+    color: black;
+}
+
+.groof {
+    padding: 2rem;
+    box-shadow: 2px 2px 7px yellow;
+    width: 30rem;
+    height: 50rem;
+}
+
   
